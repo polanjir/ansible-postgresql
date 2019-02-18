@@ -1,7 +1,7 @@
 ---
 
 - name: Install pgdg package signing key (Debian/pgdg)
-  apt_key: keyserver=pgp.mit.edu id=ACCC4CF8
+  apt_key: url=https://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc
   when: postgresql_flavor is defined and postgresql_flavor == "pgdg"
   
 - name: Install pgdg repository (Debian/pgdg)
